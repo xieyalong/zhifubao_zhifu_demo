@@ -14,4 +14,25 @@ Error:A problem occurred configuring project ':app'.
 
 ```sdk.dir={本机Android SDK所在绝对路径}```
 
-jfakdsjkfsjd```
+-----------------------------------------------
+//orderInfo 是后台生成
+Runnable payRunnable = new Runnable() {
+
+			@Override
+			public void run() {
+				PayTask alipay = new PayTask(PayDemoActivity.this);
+//				Map<String, String> result = alipay.payV2(orderInfo, true);
+				Map<String, String> result = alipay.payV2(data_http, true);
+
+				Log.i("msp", result.toString());
+				
+				Message msg = new Message();
+				msg.what = SDK_PAY_FLAG;
+				msg.obj = result;
+				mHandler.sendMessage(msg);
+			}
+		};
+
+		Thread payThread = new Thread(payRunnable);
+		payThread.start();
+---------------------------------------------
