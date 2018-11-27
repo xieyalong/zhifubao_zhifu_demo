@@ -13,3 +13,5 @@ Error:A problem occurred configuring project ':app'.
 2. 在project根目录下添加`local.properties`文件，并指定
 
 ```sdk.dir={本机Android SDK所在绝对路径}```
+
+jfakdsjkfsjd```
