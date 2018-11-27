@@ -24,6 +24,7 @@ Error:A problem occurred configuring project ':app'.
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    
    代码申请：
   private void requestPermission() {
 		// Here, thisActivity is the current activity
@@ -43,6 +44,7 @@ Error:A problem occurred configuring project ':app'.
 		}
 	}
 在根gradle：
+
 allprojects {
     repositories {
 
@@ -54,7 +56,9 @@ allprojects {
         jcenter()
     }
 }
+
 导入arr：
+
   // 支付宝 SDK AAR 包所需的配置
     compile (name: 'alipaySdk-15.5.7-20181023110917', ext: 'aar')
     
@@ -77,7 +81,9 @@ Runnable payRunnable = new Runnable() {
 
 		Thread payThread = new Thread(payRunnable);
 		payThread.start();
+		
 回调：
+
  private Handler mHandler = new Handler(Looper.myLooper()) {
         @SuppressWarnings("unused")
         public void handleMessage(Message msg) {
