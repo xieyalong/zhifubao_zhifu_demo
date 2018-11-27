@@ -24,7 +24,7 @@ Error:A problem occurred configuring project ':app'.
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-  代码申请：
+   代码申请：
   private void requestPermission() {
 		// Here, thisActivity is the current activity
 		if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE)
