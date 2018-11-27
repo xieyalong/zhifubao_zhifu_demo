@@ -82,6 +82,9 @@ Runnable payRunnable = new Runnable() {
 		Thread payThread = new Thread(payRunnable);
 		payThread.start();
 		
+
+
+---------------------------------------------
 回调：
 
  private Handler mHandler = new Handler(Looper.myLooper()) {
@@ -106,5 +109,3 @@ Runnable payRunnable = new Runnable() {
                     }
                     break;
                 }
- }		
----------------------------------------------
